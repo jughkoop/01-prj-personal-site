@@ -1,1 +1,363 @@
-/* Add you CSS here */
+/* ===== COLOR SCHEME ===== */
+/* Earthy tones for a minimalist, modern look */
+:root {
+  --hero-green: #527d5f;      /* Muted malachite green for hero section */
+  --bg-gray: #f5f5f5;          /* Subtle gray for section backgrounds */
+  --text-brown: #5a4a3a;       /* Earthy brown for text */
+  --light-gray: #e8e8e8;       /* Lighter gray for borders/accents */
+  --white: #ffffff;            /* White for text on dark backgrounds */
+}
+
+/* ===== GLOBAL STYLES ===== */
+/* Reset default margins and padding, set up basic typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* Include padding and border in width/height calculations */
+}
+
+/* Body styling - main text color and font family */
+body {
+  font-family: 'Cascadia Code', 'Courier New', monospace;  /* Vintage monospace font */
+  color: var(--text-brown);  /* Earthy brown text */
+  line-height: 1.6;  /* Comfortable spacing between lines */
+  background-color: #ffffff;  /* Clean white background */
+}
+
+/* Headings styling */
+h1, h2, h3 {
+  color: var(--text-brown);
+  margin-bottom: 1rem;  /* Space below headings */
+  font-weight: 600;  /* Slightly bold */
+}
+
+h1 {
+  font-size: 2.5rem;  /* Large size for main heading */
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;  /* Medium-large size for section headings */
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;  /* Smaller than h2 */
+  margin-bottom: 1rem;
+}
+
+/* Paragraph styling */
+p {
+  margin-bottom: 1.5rem;  /* Space after paragraphs */
+  font-size: 1.1rem;  /* Readable font size */
+}
+
+/* Strong text (bold) styling */
+strong {
+  color: var(--text-brown);
+  font-weight: 600;
+}
+
+/* Container for consistent horizontal spacing */
+.container {
+  max-width: 900px;  /* Maximum width for readability */
+  margin: 0;  /* Left-align the container */
+  padding: 0 2rem;  /* Padding on left and right */
+}
+
+/* ===== HERO SECTION ===== */
+/* Main landing section with distinctive earthy green background */
+.hero {
+  background-color: var(--hero-green);  /* Earthy green background */
+  color: var(--white);  /* White text for contrast */
+  padding: 5rem 2rem;  /* Vertical and horizontal padding */
+}
+
+/* Container for hero section with two columns */
+.hero-container {
+  max-width: 1200px;  /* Wide max-width for side-by-side layout */
+  display: flex;  /* Use flexbox for horizontal layout */
+  justify-content: space-between;  /* Space content apart */
+  gap: 3rem;  /* Space between columns */
+  align-items: flex-start;  /* Align items to top */
+  padding: 0 2rem;  /* Left and right padding */
+}
+
+/* Main content and contact area styling */
+.hero-container h1 {
+  flex: 1;  /* Take up available space */
+  text-align: left;  /* Left-align text */
+}
+
+.hero-container > div:last-child {
+  flex: 0 0 auto;  /* Don't grow or shrink */
+  text-align: right;  /* Right-align text */
+  margin-left: auto;  /* Push all the way to the right */
+}
+
+/* Hero heading */
+.hero h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  text-align: left;  /* Left-align text */
+}
+
+/* Hero contact heading */
+.hero-container h2 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Hero subtitle - smaller text below main heading */
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);  /* Slightly transparent white */
+  margin-top: 1rem;
+  max-width: 600px;  /* Limit width for readability */
+}
+
+/* ===== ABOUT SECTION ===== */
+/* Section with subtle gray background */
+.about {
+  background-color: var(--bg-gray);  /* Subtle gray background */
+  padding: 4rem 2rem;  /* Vertical and horizontal padding */
+}
+
+/* Container for about section with two columns */
+.about-container {
+  max-width: 1200px;  /* Wide max-width for side-by-side layout */
+  display: flex;  /* Use flexbox for horizontal layout */
+  gap: 3rem;  /* Space between columns */
+  align-items: flex-start;  /* Align items to top */
+  padding: 0 2rem;  /* Left and right padding */
+}
+
+/* About heading */
+.about h2 {
+  color: var(--text-brown);
+}
+
+/* Skills list styling */
+.skills-list {
+  list-style: none;  /* Remove default bullets */
+  display: flex;  /* Use flexbox for layout */
+  flex-direction: column;  /* Stack items vertically */
+  gap: 0.75rem;  /* Space between items */
+  padding: 0;  /* Remove default padding */
+  margin: 0;  /* Remove default margin */
+}
+
+/* Individual skill item with custom icon bullet */
+.skill-item {
+  display: flex;  /* Use flexbox for alignment */
+  align-items: center;  /* Center items vertically */
+  gap: 0.75rem;  /* Space between icon and text */
+  font-size: 1rem;  /* Normal font size */
+  color: var(--text-brown);  /* Earthy brown text */
+}
+
+/* Skill icon styling */
+.skill-icon {
+  width: 24px;  /* Icon size */
+  height: 24px;  /* Square dimensions */
+  display: block;  /* Display as block element */
+  filter: brightness(0) saturate(100%) invert(30%) sepia(23%) saturate(465%) hue-rotate(335deg);  /* Convert to earthy brown */
+}
+
+/* ===== PROJECTS SECTION ===== */
+/* Section showcasing portfolio projects */
+.projects {
+  background-color: var(--bg-gray);  /* Subtle gray background */
+  padding: 2rem 2rem 4rem 2rem;  /* Reduced top padding, normal bottom padding */
+  border-top: 1px solid var(--light-gray);  /* Light divider line */
+}
+
+/* Projects heading */
+.projects h2 {
+  color: var(--text-brown);
+}
+
+/* Grid container for project cards */
+.projects-grid {
+  display: flex;  /* Use flexbox for layout */
+  flex-wrap: wrap;  /* Allow items to wrap */
+  gap: 2rem;  /* Space between project cards */
+  justify-content: flex-start;  /* Align to the left */
+}
+
+/* Individual project card styling */
+.project-card {
+  background-color: var(--hero-green);  /* Earthy green background */
+  color: var(--white);  /* White text */
+  padding: 1.5rem;  /* Padding inside card */
+  border-radius: 8px;  /* Slightly rounded corners */
+  flex: 0 1 calc(50% - 1rem);  /* Two columns with gap consideration */
+  display: flex;  /* Use flexbox for layout */
+  flex-direction: column;  /* Stack content vertically */
+}
+
+/* Project card heading */
+.project-card h3 {
+  color: var(--white);  /* White text for heading */
+  font-size: 1.3rem;  /* Readable size */
+  margin-bottom: 0.75rem;  /* Space below heading */
+}
+
+/* Project card description */
+.project-card p {
+  color: rgba(255, 255, 255, 0.95);  /* Slightly transparent white */
+  flex: 1;  /* Take up available space */
+  margin-bottom: 1rem;  /* Space below text */
+}
+
+/* Project GitHub link styling */
+.project-link {
+  color: var(--white);  /* White text */
+  text-decoration: none;  /* Remove underline by default */
+  font-weight: 600;  /* Bold text */
+  transition: text-decoration 0.3s ease;  /* Smooth animation */
+  margin-top: 0;  /* No top margin */
+}
+
+/* Project link hover effect */
+.project-link:hover {
+  text-decoration: underline;  /* Underline on hover */
+}
+
+/* ===== HOBBIES SECTION ===== */
+/* Section about personal interests and hobbies */
+.hobbies {
+  background-color: var(--bg-gray);  /* Subtle gray background */
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--light-gray);  /* Light divider line */
+}
+
+/* Hobbies heading */
+.hobbies h2 {
+  color: var(--text-brown);
+}
+
+/* Grid container for hobby cards */
+.hobbies-grid {
+  display: flex;  /* Use flexbox for layout */
+  flex-wrap: wrap;  /* Allow items to wrap */
+  gap: 4rem;  /* Space between cards */
+  justify-content: flex-start;  /* Align cards to the left */
+}
+
+/* Individual hobby card */
+.hobby-card {
+  flex: 0 1 auto;  /* Shrink to content size */
+  text-align: center;  /* Center content */
+  color: var(--text-brown);  /* Brown text */
+}
+
+/* Hobby image link styling */
+.hobby-link {
+  display: block;  /* Make link block element */
+  margin-bottom: 1rem;  /* Space below image */
+  text-decoration: none;  /* Remove underline */
+}
+
+/* Hobby image styling */
+.hobby-image {
+  width: 100%;  /* Responsive width */
+  max-width: 100px;  /* Limit maximum size */
+  height: auto;  /* Maintain aspect ratio */
+  display: block;  /* Display as block element */
+  margin: 0 auto;  /* Center the image */
+  transition: all 0.3s ease;  /* Smooth animation */
+}
+
+/* Hobby image hover effect */
+.hobby-link:hover .hobby-image {
+  transform: scale(1.1);  /* Slightly enlarge on hover */
+  opacity: 0.8;  /* Slightly transparent on hover */
+}
+
+/* Hobby card paragraph styling */
+.hobby-card p {
+  color: var(--text-brown);  /* Brown text */
+  font-size: 1rem;  /* Normal font size */
+  margin: 0;  /* Remove default margin */
+}
+
+/* ===== CONTACT SECTION ===== */
+/* Final section with social media links - now removed, integrated into hero */
+
+/* Container for social media links */
+.social-links {
+  display: flex;  /* Use flexbox for horizontal layout */
+  justify-content: flex-end;  /* Right-align links by default */
+  gap: 2rem;  /* Space between icons */
+  margin: 0;  /* Remove default margin */
+}
+
+/* Social media icon styling */
+.social-icon {
+  display: inline-block;  /* Make it a block to apply width/height */
+  width: 50px;  /* Icon size */
+  height: 50px;  /* Square dimensions */
+  color: var(--white);  /* Icon color - white in hero section */
+  text-decoration: none;  /* Remove underline */
+  transition: all 0.3s ease;  /* Smooth animation */
+  padding: 5px;  /* Small padding inside */
+}
+
+/* Social icon hover effect */
+.social-icon:hover {
+  transform: scale(1.2);  /* Slightly enlarge icon */
+  opacity: 0.8;  /* Slightly transparent on hover */
+}
+
+/* Image styling within social icons */
+.social-icon img {
+  width: 100%;  /* Fill the icon container */
+  height: 100%;  /* Fill the icon container */
+  filter: brightness(0) saturate(100%) invert(100%);  /* Convert image to white */
+}
+
+/* ===== FOOTER ===== */
+/* Simple footer section */
+footer {
+  background-color: var(--light-gray);  /* Light gray background */
+  text-align: left;  /* Left-align text */
+  padding: 2rem;  /* Padding around text */
+  color: var(--text-brown);  /* Earthy brown text */
+  font-size: 0.95rem;  /* Slightly smaller text */
+  border-top: 1px solid #ddd;  /* Light border on top */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Styles for smaller screens (tablets and phones) */
+@media (max-width: 768px) {
+  /* Reduce heading sizes on mobile */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Reduce padding on mobile */
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .about, .skills, .hobbies, .contact {
+    padding: 3rem 1rem;
+  }
+  
+  /* Adjust profile image size on mobile */
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Reduce gap between skills on mobile */
+  .skills-list {
+    gap: 0.75rem;
+  }
+}

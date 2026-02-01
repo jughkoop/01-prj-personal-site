@@ -1,11 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding and viewport for mobile responsiveness -->
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daniel lee</title>
+  
+  <!-- Link to external CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Google Fonts - importing Cascadia Code -->
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- ===== HERO SECTION ===== -->
+  <!-- This is the main landing section with welcome message and contact -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <!-- Main heading -->
+        <h1>daniel lee</h1>
+        
+        <!-- Subheading with call to action -->
+        <p class="hero-subtitle">aspiring software and web developer. explore my projects and learn more about what i love to build.</p>
+      </div>
+      
+      <div class="hero-contact">
+        <h2>contact</h2>
+        
+        <!-- Social media links with icons -->
+        <div class="social-links">
+          <!-- LinkedIn link -->
+          <a href="https://www.linkedin.com/in/daniel-lee-63a511293/" class="social-icon" aria-label="linkedin">
+            <img src="img/linkedin.png" alt="LinkedIn">
+          </a>
+          
+          <!-- GitHub link -->
+          <a href="https://github.com/jughkoop" class="social-icon" aria-label="github">
+            <img src="img/github.png" alt="GitHub">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ME SECTION ===== -->
+  <section class="about">
+    <div class="about-container">
+      <div class="about-content">
+        <h2>about me</h2>
+        
+        <!-- Minimalistic combined about section -->
+        <p>i'm an aspiring web developer with a passion for creating functional experiences with a minimalistic style. i have experience with java, python, and c#, and i'm skilled in data analytics and artificial intelligence. i'm continuously learning and growing my skills in web development and software engineering.</p>
+      </div>
+      
+      <div class="skills-sidebar">
+        <h2>skills</h2>
+        
+        <!-- Skills displayed as bulleted list with icon bullets -->
+        <ul class="skills-list">
+          <li class="skill-item">
+            <img src="img/java.png" alt="java" class="skill-icon">
+            java
+          </li>
+          <li class="skill-item">
+            <img src="img/javascript.png" alt="javascript" class="skill-icon">
+            javascript
+          </li>
+          <li class="skill-item">
+            <img src="img/python.png" alt="python" class="skill-icon">
+            python
+          </li>
+          <li class="skill-item">
+            <img src="img/csharp.png" alt="c#" class="skill-icon">
+            c#
+          </li>
+          <li class="skill-item">
+            <img src="img/html.png" alt="html" class="skill-icon">
+            html
+          </li>
+          <li class="skill-item">
+            <img src="img/css.png" alt="css" class="skill-icon">
+            css
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects">
+    <div class="container">
+      <h2>projects</h2>
+      
+      <!-- Projects displayed as cards -->
+      <div class="projects-grid">
+        <!-- Project 1: Text Generator -->
+        <div class="project-card">
+          <h3>text generator</h3>
+          <p>a java program that generates text based on a given document. this project demonstrates text processing and algorithmic thinking.</p>
+          <a href="https://github.com/jughkoop/TextGenerator" class="project-link">github</a>
+        </div>
+        
+        <!-- Project 2: Battle of Wits -->
+        <div class="project-card">
+          <h3>battle of wits</h3>
+          <p>a game coded in javascript where 2 players choose 3 words and play against each other in a turn-based battle. this project showcases game logic and interactive gameplay.</p>
+          <a href="https://github.com/jughkoop/battleOfWits" class="project-link">github</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOBBIES SECTION ===== -->
+  <section class="hobbies">
+    <div class="container">
+      <h2>hobbies</h2>
+      
+      <!-- Hobbies displayed as subsections -->
+      <div class="hobbies-grid">
+        <!-- Hobby 1: Lego -->
+        <div class="hobby-card">
+          <a href="https://www.lego.com" class="hobby-link">
+            <img src="img/lego.png" alt="LEGO" class="hobby-image">
+          </a>
+          <p>building lego</p>
+        </div>
+        
+        <!-- Hobby 2: Minecraft Dungeons -->
+        <div class="hobby-card">
+          <a href="https://www.minecraft.net/en-us/about-dungeons" class="hobby-link">
+            <img src="img/mcdungeons.png" alt="Minecraft Dungeons" class="hobby-image">
+          </a>
+          <p>grinding minecraft dungeons</p>
+        </div>
+        
+        <!-- Hobby 3: Denver Broncos -->
+        <div class="hobby-card">
+          <a href="https://www.denverbroncos.com/" class="hobby-link">
+            <img src="img/broncos.png" alt="Denver Broncos" class="hobby-image">
+          </a>
+          <p>cheering for the broncos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 daniel lee. all rights reserved.</p>
+  </footer>
 </body>
 </html>
